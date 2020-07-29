@@ -1,0 +1,19 @@
+.nav {
+  grid-area: n;
+  background-color: white;
+  padding: 20px;
+  border: 1px black;
+}
+
+.item a {
+  color: cornflowerblue;
+  text-decoration: none;
+}
+.item a:hover {
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.item a.active {
+  color: blue;
+}
