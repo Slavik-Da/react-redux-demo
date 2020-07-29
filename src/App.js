@@ -36,39 +36,39 @@ class App extends React.Component {
           <HeaderContainer/>
           <Navbar/>
           <div className="app-wrapper-content">
-              <Route
-                exact path='/'
-                render={withSuspense(ProfileContainer)}
-              />
-              <Route
-                path='/dialogs'
-                render={withSuspense(DialogsContainer)}/>
+            <Route
+              exact path='/'
+              render={withSuspense(ProfileContainer)}
+            />
+            <Route
+              path='/dialogs'
+              render={withSuspense(DialogsContainer)}/>
 
-              <Route
-                path='/profile/:userId?'
-                render={withSuspense(ProfileContainer)}
-              />
+            <Route
+              path='/profile/:userId?'
+              render={withSuspense(ProfileContainer)}
+            />
 
-              <Route
-                path='/users'
-                render={() => <UsersContainer/>}
-              />
+            <Route
+              path='/users'
+              render={() => <UsersContainer/>}
+            />
 
-              <Route
-                path='/login'
-                render={() => <LoginPage/>}
-              />
-              <Route
-                path='/news'
-                render={() => <News/>}/>
+            <Route
+              path='/login'
+              render={() => <LoginPage/>}
+            />
+            <Route
+              path='/news'
+              render={() => <News/>}/>
 
-              <Route
-                path='/music'
-                render={() => <Music/>}/>
+            <Route
+              path='/music'
+              render={() => <Music/>}/>
 
-              <Route
-                path='/settings'
-                render={() => <Settings/>}/>
+            <Route
+              path='/settings'
+              render={() => <Settings/>}/>
 
           </div>
         </div>

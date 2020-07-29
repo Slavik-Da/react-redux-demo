@@ -67,7 +67,7 @@ export const login = (email, password, rememberMe, captcha) => async (dispatch) 
 export const getCaptchaUrl = () => async (dispatch) => {
   const response = await securityApi.getCaptchaUrl()
   const captchaUrl = response.data.url
-    dispatch(getCaptchaUrlSuccess(captchaUrl))
+  dispatch(getCaptchaUrlSuccess(captchaUrl))
 
 }
 

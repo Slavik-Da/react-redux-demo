@@ -12,12 +12,12 @@ const maxLength30 = maxLengthCreator(30)
 const LoginForm = ({handleSubmit, error, captchaUrl}) => {
   return (
     <form onSubmit={handleSubmit}>
-        {createField('Email', 'email', [required, maxLength25], Input )}
-        {createField('Password', 'password', [required, maxLength30], Input, {type: 'password'} )}
-        {createField(null, 'rememberMe', null, Input, {type: 'checkbox'}, 'remember me' )}
+      {createField('Email', 'email', [required, maxLength25], Input)}
+      {createField('Password', 'password', [required, maxLength30], Input, {type: 'password'})}
+      {createField(null, 'rememberMe', null, Input, {type: 'checkbox'}, 'remember me')}
 
       {captchaUrl && <img src={captchaUrl}/>}
-      {captchaUrl && createField('Symbols from image', 'captcha', [required], Input, {} ) }
+      {captchaUrl && createField('Symbols from image', 'captcha', [required], Input, {})}
 
       {error && <div className={styles.formSummaryError}>
         {error}
@@ -31,7 +31,7 @@ const LoginForm = ({handleSubmit, error, captchaUrl}) => {
 
 const LoginReduxForm = reduxForm({
   form: 'login'
-}) (LoginForm)
+})(LoginForm)
 
 const Login = (props) => {
   const onSubmit = (formData) => {
@@ -54,4 +54,4 @@ const mapStateToProps = (state) => ({
   isAuth: state.auth.isAuth,
   captchaUrl: state.auth.captchaUrl
 })
-export default connect(mapStateToProps, {login}) (Login)
+export default connect(mapStateToProps, {login})(Login)

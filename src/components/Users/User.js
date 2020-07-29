@@ -10,7 +10,7 @@ let User = ({user, followingInProgress, unfollow, follow, ...props}) => {
         <div>
           <NavLink to={`/profile/${user.id}`}>
                  <img src={user.photos.small != null
-                    ? user.photos.small
+                   ? user.photos.small
                    : userPhoto} className={styles.userPhoto}
                  />
               </NavLink>

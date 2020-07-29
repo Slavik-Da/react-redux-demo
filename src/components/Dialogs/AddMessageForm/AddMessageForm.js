@@ -12,13 +12,13 @@ const AddMessageForm = (props) => {
         <Field component={Textarea}
                name={'newMessageBody'}
                placeholder={'Enter your message'}
-               validate={[required, maxLength150]} />
+               validate={[required, maxLength150]}/>
       </div>
       <div>
-        <button >Send message</button>
+        <button>Send message</button>
       </div>
     </form>
   )
 }
 
-export default reduxForm({form: 'dialogAddMessageForm'}) (AddMessageForm)
+export default reduxForm({form: 'dialogAddMessageForm'})(AddMessageForm)
