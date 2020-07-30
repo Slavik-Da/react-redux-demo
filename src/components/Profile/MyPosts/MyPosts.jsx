@@ -4,6 +4,7 @@ import Post from "./Post/Post";
 import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, required} from "../../../utils/validators/validators";
 import {Textarea} from "../../common/FormsControls/FormsControls";
+import user from './../../../assets/images/user.png'
 
 const maxLength10 = maxLengthCreator(10)
 
@@ -15,7 +16,7 @@ const MyPosts = React.memo(props => {
         return <Post key={p.id}
                      message={p.message}
                      likes={p.likesCount}
-                     imgSrc={p.imgSrc}
+                     imgSrc={p.imgSrc ? p.imgSrc : user}
         />
       })
 
