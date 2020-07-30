@@ -32,7 +32,7 @@ let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portion
                        key={p}
                        onClick={(e) => {
                          onPageChanged(p)
-                       }}>{p}</span>
+                       }}><a>{p}</a></span>
         })}
       {portionCount > portionNumber &&
       <button onClick={() => {
