@@ -31,7 +31,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
     <div>
       <div className={styles.descriptionBlock}>
         <img src={profile.photos.large || userPhoto} className={styles.mainPhoto}/>
-        {isOwner && <input type='file' onChange={onMainPhotoSelected}/>}
+        {isOwner && <div><input type='file' onChange={onMainPhotoSelected}/></div>}
 
         {editMode
           ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>
