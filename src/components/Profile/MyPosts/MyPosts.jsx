@@ -45,9 +45,6 @@ let AddNewPostForm = (props) => {
       <div>
         <button>Add post</button>
       </div>
-      <div>
-        <button>Remove post</button>
-      </div>
     </form>
   )
 }
